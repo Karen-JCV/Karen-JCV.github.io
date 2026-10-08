@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Karen Camacho Verastegui</h1>
+      <p class="hero-subtitle">Data Scientist & AI Engineer</p>
+      <p class="hero-typing">Diseño soluciones analíticas y sistemas inteligentes que transforman datos en decisiones.</p>
+
+      <div class="hero-buttons">
+        <a href="#proyectos" class="btn">Ver proyectos</a>
+        <a href="#sobre-mi" class="btn-secondary">Sobre mí</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    {{ content }}
+  </main>
+
+  <footer class="footer">
+    <p>© {{ site.title }} — {{ site.description }}</p>
+  </footer>
+</body>
+</html>

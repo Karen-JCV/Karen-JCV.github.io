@@ -1,0 +1,8 @@
+title: "Karen Camacho Verastegui"
+description: "Data Scientist & AI Engineer"
+theme: minima
+markdown: kramdown
+
+# Activar assets personalizados
+include:
+  - assets
