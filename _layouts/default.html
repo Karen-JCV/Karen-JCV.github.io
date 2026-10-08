@@ -2,30 +2,99 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>{{ page.title }} - {{ site.title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <meta name="author" content="{{ site.author }}">
+
+  <!-- Open Graph / Meta Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ site.url }}">
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ site.description }}">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Karen Camacho Verastegui</h1>
-      <p class="hero-subtitle">Data Scientist & AI Engineer</p>
-      <p class="hero-typing">Diseño soluciones analíticas y sistemas inteligentes que transforman datos en decisiones.</p>
+  <!-- Header / Fixed Navbar -->
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#hero" class="nav-brand">
+          <div class="brand-logo">KC</div>
+          <div class="brand-text">
+            <span class="brand-name">Karen Camacho</span>
+            <span class="brand-title">Data Scientist & AI</span>
+          </div>
+        </a>
 
-      <div class="hero-buttons">
-        <a href="#proyectos" class="btn">Ver proyectos</a>
-        <a href="#sobre-mi" class="btn-secondary">Sobre mí</a>
-      </div>
+        <ul class="nav-links">
+          <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#contacto" class="btn btn-secondary btn-sm">Contacto</a>
+          <a href="https://github.com/Karen-JCV" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+
+        <button class="mobile-toggle" aria-label="Abrir menú de navegación">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12"/>
+            <line x1="4" x2="20" y1="6" y2="6"/>
+            <line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
+        </button>
+      </nav>
     </div>
   </header>
 
-  <main class="content">
+  <!-- Main Content Slot -->
+  <main>
     {{ content }}
   </main>
 
-  <footer class="footer">
-    <p>© {{ site.title }} — {{ site.description }}</p>
+  <!-- Global Toast Notification -->
+  <div id="toast-notice" class="toast-notice">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+    <span>¡Correo copiado al portapapeles!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <p>© {{ 'now' | date: "%Y" }} <strong>Karen Camacho Verastegui</strong> — Data Scientist & AI Engineer</p>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#habilidades">Habilidades</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><button id="back-to-top" class="footer-back-to-top">↑ Subir</button></li>
+        </ul>
+      </div>
+    </div>
   </footer>
+
+  <!-- Scripts -->
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
