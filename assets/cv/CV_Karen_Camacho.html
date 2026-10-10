@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Karen Camacho Verastegui - Curriculum Vitae (Data Science & AI)</title>
+  <style>
+    /* Estilos optimizados para ATS y exportación a PDF (A4) */
+    @page {
+      size: A4;
+      margin: 14mm 16mm;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Calibri', 'Inter', -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+      font-size: 9.8pt;
+      line-height: 1.35;
+      color: #111827;
+      background: #ffffff;
+      padding: 0;
+    }
+    .cv-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* Encabezado */
+    .header {
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+    .name {
+      font-size: 20pt;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .headline {
+      font-size: 11.5pt;
+      font-weight: 600;
+      color: #2563eb;
+      margin-bottom: 6px;
+    }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 8.8pt;
+      color: #374151;
+    }
+    .contact-item strong {
+      color: #111827;
+    }
+    .contact-row a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    /* Secciones */
+    .section {
+      margin-bottom: 12px;
+      page-break-inside: avoid;
+    }
+    .section-title {
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #0f172a;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-bottom: 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    p {
+      margin-bottom: 5px;
+      color: #374151;
+      text-align: justify;
+    }
+    /* Listas y viñetas */
+    ul {
+      list-style-type: disc;
+      margin-left: 18px;
+      margin-bottom: 6px;
+    }
+    li {
+      margin-bottom: 3px;
+      color: #374151;
+    }
+    li strong {
+      color: #111827;
+    }
+    /* Bloques de experiencia / proyectos */
+    .item {
+      margin-bottom: 9px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .item-title {
+      font-size: 10pt;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .item-subtitle {
+      font-size: 9.2pt;
+      font-weight: 600;
+      color: #2563eb;
+    }
+    .item-meta {
+      font-size: 8.8pt;
+      font-weight: 500;
+      color: #64748b;
+      white-space: nowrap;
+    }
+    .item-tech {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: #4b5563;
+      margin-bottom: 3px;
+    }
+    .skills-category {
+      margin-bottom: 4px;
+      font-size: 9.3pt;
+    }
+    .skills-category strong {
+      color: #0f172a;
+    }
+    /* Enlaces */
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    @media print {
+      body {
+        background: #ffffff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .cv-container {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="cv-container">
+  <!-- ENCABEZADO -->
+  <header class="header">
+    <h1 class="name">Karen Camacho Verastegui</h1>
+    <div class="headline">Data Scientist | AI Engineer | Data Analyst</div>
+    <div class="contact-row">
+      <span class="contact-item"><strong>Ubicación:</strong> Valencia, España</span>
+      <span class="contact-item"><strong>Teléfono:</strong> +34 618 668 343</span>
+      <span class="contact-item"><strong>Email:</strong> <a href="mailto:karenverastegui22@gmail.com">karenverastegui22@gmail.com</a></span>
+      <span class="contact-item"><strong>Portfolio:</strong> <a href="https://karen-jcv.github.io" target="_blank">karen-jcv.github.io</a></span>
+      <span class="contact-item"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/karen-camacho-verastegui" target="_blank">linkedin.com/in/karen-camacho-verastegui</a></span>
+      <span class="contact-item"><strong>GitHub:</strong> <a href="https://github.com/Karen-JCV" target="_blank">github.com/Karen-JCV</a></span>
+    </div>
+  </header>
+
+  <!-- RESUMEN PROFESIONAL -->
+  <section class="section">
+    <h2 class="section-title">Resumen Profesional</h2>
+    <p>
+      <strong>Data Scientist e Ingeniera de IA</strong> con sólida base cuantitativa y titulación de <strong>Máster en Data Science & IA (Nota final 9.4/10)</strong>. Especializada en el ciclo de vida completo del dato (<em>End-to-End</em>): desde la extracción y modelado relacional en SQL y pipelines analíticos con Python, hasta el entrenamiento de modelos predictivos supervisados (Scikit-Learn, calibración y explicabilidad con SHAP), desarrollo de agentes conversacionales y sistemas de IA Generativa con arquitecturas RAG (LangGraph, ChromaDB, Gemini) y cuadros de mando interactivos en Streamlit y Power BI. Trayectoria previa optimizando procesos organizacionales y métricas comerciales mediante toma de decisiones basada en datos.
+    </p>
+  </section>
+
+  <!-- HABILIDADES TÉCNICAS -->
+  <section class="section">
+    <h2 class="section-title">Habilidades Técnicas</h2>
+    <div class="skills-category">
+      <strong>Lenguajes & Programación:</strong> Python (Pandas, NumPy, Scikit-learn, SciPy, Matplotlib, Seaborn), SQL, DAX, Bash básico.
+    </div>
+    <div class="skills-category">
+      <strong>Machine Learning & Explicabilidad:</strong> Clasificación y regresión supervisada, calibración probabilística (CalibratedClassifierCV), clustering no supervisado (HDBSCAN, UMAP), interpretabilidad con SHAP, validación cruzada y optimización de hiperparámetros.
+    </div>
+    <div class="skills-category">
+      <strong>IA Generativa & NLP:</strong> RAG (Retrieval-Augmented Generation), base de datos vectorial ChromaDB, orquestación agéntica con LangGraph y LangChain, Gemini API (SDK 2.5), streaming de respuestas, Transformers, Hugging Face, modelado de tópicos con BERTopic.
+    </div>
+    <div class="skills-category">
+      <strong>Bases de Datos & Data Engineering:</strong> PostgreSQL, MySQL, SQLite, MariaDB, consultas SQL complejas (JOINs, CTEs, subqueries, funciones de ventana, stored procedures), pipelines ETL, Apache Parquet (pyarrow) y joblib.
+    </div>
+    <div class="skills-category">
+      <strong>Visualización & Business Intelligence:</strong> Streamlit, Power BI (modelado relacional, DAX, cuadros de mando), Tableau, Plotly, Excel Avanzado (Power Query y tablas dinámicas).
+    </div>
+    <div class="skills-category">
+      <strong>Herramientas & Entornos:</strong> Git, GitHub, entornos virtuales (venv), Docker (fundamentos de despliegue), Jupyter Notebook, VS Code, Linux/Ubuntu (CLI).
+    </div>
+  </section>
+
+  <!-- PROYECTOS DESTACADOS EN DATA SCIENCE & IA -->
+  <section class="section">
+    <h2 class="section-title">Proyectos Destacados de Data Science & IA</h2>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Beauty Girl Studio – Smart Data Suite</span> | <span class="item-subtitle">Machine Learning & Churn Prediction</span>
+        </div>
+        <span class="item-meta"><a href="https://github.com/Karen-JCV/Beauty-Girl-Studio-Smart-Data-Suite" target="_blank">Ver Repositorio</a></span>
+      </div>
+      <div class="item-tech">Tecnologías: Python, Scikit-learn, SHAP, SQLite, Apache Parquet, Streamlit, Plotly</div>
+      <ul>
+        <li>Diseño e implementación de solución integral de retención y fidelización de clientas en centros de servicios estéticos.</li>
+        <li>Desarrollo de modelo predictivo supervisado con calibración de probabilidades para anticipar el riesgo de no retorno a 90 días, incorporando explicabilidad global y local mediante <strong>SHAP</strong>.</li>
+        <li>Despliegue de aplicación interactiva en <strong>Streamlit</strong> que permite priorizar clientas en riesgo, calcular impacto comercial y gestionar acciones de reactivación.</li>
+        <li>Optimización de persistencia y lectura de datos mediante almacenamiento columnar Parquet y persistencia en SQLite.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">AI Asistente de Extranjería</span> | <span class="item-subtitle">IA Generativa, RAG Agéntico & LLMs</span>
+        </div>
+        <span class="item-meta"><a href="https://github.com/Karen-JCV/AI-Asistente-de-Extranjeria" target="_blank">Ver Repositorio</a></span>
+      </div>
+      <div class="item-tech">Tecnologías: Python, Google Gemini 2.5 Flash, LangGraph, LangChain, ChromaDB, Streamlit, pypdf</div>
+      <ul>
+        <li>Construcción de asistente conversacional especializado en normativa migratoria y trámites legales con arquitectura RAG.</li>
+        <li>Implementación de almacenamiento y recuperación semántica vectorial mediante <strong>ChromaDB</strong> y Google Generative AI Embeddings.</li>
+        <li>Orquestación de flujos conversacionales dinámicos y multi-paso mediante <strong>LangGraph</strong> con memoria contextual persistente.</li>
+        <li>Integración de ingesta y lectura de documentos PDF y respuesta en streaming token a token con interfaz en Streamlit.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Análisis de Reviews Trustpilot con NLP</span> | <span class="item-subtitle">Topic Modeling & Sentiment Analysis</span>
+        </div>
+        <span class="item-meta"><a href="https://github.com/Karen-JCV/Analisis-de-Reviews-Trustpilot-con-NLP-Canadian-Affair" target="_blank">Ver Repositorio</a></span>
+      </div>
+      <div class="item-tech">Tecnologías: Python, Transformers, BERTopic, Hugging Face, UMAP, HDBSCAN, Scikit-learn, Seaborn</div>
+      <ul>
+        <li>Pipeline de procesamiento de texto y análisis de sentimiento no supervisado sobre reseñas de clientes (caso Canadian Affair).</li>
+        <li>Modelado de tópicos y agrupamiento semántico mediante embeddings de Transformers, reducción con <strong>UMAP</strong> y clustering <strong>HDBSCAN</strong> con <strong>BERTopic</strong>.</li>
+        <li>Identificación automática de factores clave de insatisfacción y oportunidades de mejora comercial mediante gráficos analíticos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA LABORAL -->
+  <section class="section">
+    <h2 class="section-title">Experiencia Laboral</h2>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Analista de Compras & Operaciones</span> – <span class="item-subtitle">Hotel Congreso</span>
+        </div>
+        <span class="item-meta">07/2024 – Presente | Santiago de Compostela, España</span>
+      </div>
+      <ul>
+        <li><strong>Análisis cuantitativo de aprovisionamiento:</strong> Construcción de modelos de seguimiento analítico en Excel avanzado y SQL para monitorizar costes de compra y flujos operativos, reduciendo tiempos de gestión en un 50%.</li>
+        <li><strong>Limpieza y gobernanza del dato:</strong> Depuración y estandarización de registros de inventario e insumos, incrementando la calidad y coherencia de los datos en un 20%.</li>
+        <li><strong>Reporting estratégico:</strong> Desarrollo de informes ejecutivos periódicos de gasto y evaluación de proveedores para respaldar la negociación comercial y control de márgenes.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Analista de Bases de Datos</span> – <span class="item-subtitle">Clictic</span>
+        </div>
+        <span class="item-meta">12/2023 – 01/2024 | Santiago de Compostela, España</span>
+      </div>
+      <ul>
+        <li><strong>Administración y optimización de bases de datos:</strong> Gestión y mantenimiento de bases de datos relacionales (MySQL, PostgreSQL, MariaDB), reduciendo los tiempos de respuesta de consultas en un 25%.</li>
+        <li><strong>Desarrollo SQL avanzado:</strong> Creación de consultas complejas, triggers y procedimientos almacenados para la extracción y depuración de datasets operativos (ETL).</li>
+        <li><strong>Seguridad e integridad:</strong> Ejecución de políticas de respaldo (backups periódicos) y protocolos de consistencia referencial.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Encargada de Control de Procesos & Indicadores</span> – <span class="item-subtitle">Integro Corp SpA</span>
+        </div>
+        <span class="item-meta">09/2017 – 09/2021 | Santiago de Chile</span>
+      </div>
+      <ul>
+        <li><strong>Gestión métrica y seguimiento de KPIs:</strong> Análisis cuantitativo de indicadores de eficiencia y productividad, logrando mejoras operativas de hasta un 38%.</li>
+        <li><strong>Business Intelligence & Informes directivos:</strong> Creación y presentación de informes estratégicos para la gerencia, fundamentando la toma de decisiones en evidencia analítica.</li>
+        <li><strong>Optimización de flujos y liderazgo:</strong> Detección de cuellos de botella en procesos de negocio y coordinación de equipos para la adopción de mejoras operativas.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Coordinadora Operativa & Planificación</span> – <span class="item-subtitle">SunSol Hoteles</span>
+        </div>
+        <span class="item-meta">08/2014 – 10/2016 | Isla de Margarita, Venezuela</span>
+      </div>
+      <ul>
+        <li><strong>Planificación analítica y logística:</strong> Coordinación de operaciones y gestión de volúmenes de clientes mediante planificación basada en demanda histórica, elevando la satisfacción en un 15%.</li>
+        <li><strong>Gestión de partes interesadas (Stakeholders):</strong> Comunicación eficaz, control presupuestario y resolución de incidencias en entornos de alta exigencia operativa.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCACIÓN -->
+  <section class="section">
+    <h2 class="section-title">Educación</h2>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Máster en Data Science & Desarrollo de Inteligencia Artificial (480h)</span>
+        </div>
+        <span class="item-meta">01/2026 – 10/2026</span>
+      </div>
+      <div class="item-subtitle">Evolve – Madrid / Online</div>
+      <p style="margin-top: 2px;">
+        <strong>Nota final del programa: 9.4 / 10 (Sobresaliente).</strong><br>
+        <em>Módulos con máxima calificación (10.0):</em> Asistente Experto con Gemini, RAG y Agentes; MLOps; Participación.<br>
+        <em>Módulos destacados (9.5):</em> Machine Learning; Proyecto Final Integrador.
+      </p>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Certificación Profesional en Administración de Bases de Datos (570h)</span>
+        </div>
+        <span class="item-meta">01/2023 – 07/2023</span>
+      </div>
+      <div class="item-subtitle">G12 Grupo Empresarial de Servicios S.L. – Galicia</div>
+      <p style="margin-top: 2px;">Especialización en SQL, diseño relacional, modelado de datos, seguridad y administración de servidores de bases de datos.</p>
+    </div>
+
+    <div class="item">
+      <div class="item-header">
+        <div>
+          <span class="item-title">Licenciatura en Idiomas Modernos</span>
+        </div>
+        <span class="item-meta">02/2009 – 07/2013</span>
+      </div>
+      <div class="item-subtitle">Universidad de Margarita – Venezuela</div>
+      <p style="margin-top: 2px;">Formación en análisis lingüístico estructurado, comunicación internacional y redacción técnica.</p>
+    </div>
+  </section>
+
+  <!-- CERTIFICACIONES & IDIOMAS -->
+  <section class="section">
+    <h2 class="section-title">Certificaciones Complementarias & Idiomas</h2>
+    <div class="skills-category">
+      <strong>Certificaciones Técnicas:</strong> Programación en Python (40h) & Java (90h) – Centro de Novas Tecnoloxías de Galicia (CNTG) | Prevención del Blanqueo de Capitales y Gestión Inmobiliaria (400h) – Euroinnova Business School.
+    </div>
+    <div class="skills-category" style="margin-top: 4px;">
+      <strong>Idiomas:</strong> <strong>Español:</strong> Nativo | <strong>Inglés:</strong> Competencia Profesional Completa (C1 - Licenciatura en Idiomas Modernos). Capacidad para lectura de documentación técnica, papers de IA y comunicación en entornos internacionales.
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
