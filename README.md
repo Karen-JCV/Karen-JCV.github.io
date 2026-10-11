@@ -5,7 +5,7 @@
 
 [![Portfolio](https://img.shields.io/badge/🌐_Portfolio_Web-karen--jcv.github.io-8b5cf6?style=for-the-badge&logoColor=white)](https://karen-jcv.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Karen_Camacho-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/karen-camacho-verastegui)
-[![Email](https://img.shields.io/badge/Email-Contactar-10b981?style=for-the-badge&logo=maildotru&logoColor=white)](mailto:karen.verastegui22@outlook.com)
+[![Email](https://img.shields.io/badge/Email-Contactar-10b981?style=for-the-badge&logo=maildotru&logoColor=white)](mailto:karenverastegui22@outlook.com)
 
 <br/>
 

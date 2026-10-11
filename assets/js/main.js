@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (copyEmailBtn && toast) {
     copyEmailBtn.addEventListener('click', (e) => {
       e.preventDefault();
-      const email = 'karen.verastegui22@outlook.com';
+      const email = 'karenverastegui22@outlook.com';
 
       navigator.clipboard.writeText(email).then(() => {
         toast.classList.add('show');
