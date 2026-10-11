@@ -1,6 +1,6 @@
 /* ==========================================================================
    KAREN CAMACHO VERASTEGUI - PORTFOLIO DESIGN SYSTEM
-   Modern, Sophisticated Dark Tech & AI Engineer Aesthetic
+   Modern, Sophisticated Dark Tech & AI Developer Aesthetic
    ========================================================================== */
 
 /* --- Custom Properties / Design Tokens --- */
@@ -142,6 +142,7 @@ a {
 
 .gradient-text {
   background: var(--gradient-brand);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -483,6 +484,7 @@ a {
   font-weight: 700;
   color: var(--text-primary);
   background: var(--gradient-brand);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.2;
