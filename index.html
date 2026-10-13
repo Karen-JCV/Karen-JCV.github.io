@@ -653,7 +653,7 @@ title: Portfolio
             </svg>
             Enviar Mensaje
           </a>
-          <a href="{{ '/assets/cv/KarenCamachoCV.pdf' | relative_url }}" class="btn btn-secondary" download>
+          <a href="{{ '/assets/cv/KarenCamachoCV_ES.pdf' | relative_url }}" class="btn btn-secondary" id="cv-download-btn" aria-haspopup="dialog" download>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
               <polyline points="7 10 12 15 17 10"/>
@@ -667,3 +667,53 @@ title: Portfolio
     </div>
   </div>
 </section>
+
+<!-- ==========================================================================
+     MODAL: DESCARGA DE CV (selector de idioma)
+     ========================================================================== -->
+<div class="cv-modal" id="cv-modal" role="dialog" aria-modal="true" aria-labelledby="cv-modal-title">
+  <div class="cv-modal__dialog">
+    <button type="button" class="cv-modal__close" aria-label="Cerrar / Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+
+    <div class="section-tag">// CURRÍCULUM VITAE</div>
+    <h3 class="cv-modal__title" id="cv-modal-title">Descargar CV</h3>
+    <p class="cv-modal__subtitle">Elige el idioma · Choose a language</p>
+
+    <div class="cv-modal__options">
+      <!-- Español -->
+      <a href="{{ '/assets/cv/KarenCamachoCV_ES.pdf' | relative_url }}" class="cv-option" download="Karen_Camacho_CV_ES.pdf" data-toast="Descargando CV en español…">
+        <span class="contact-icon-wrapper cv-option__badge">ES</span>
+        <span class="cv-option__lang">Español</span>
+        <span class="cv-option__meta">PDF · 2 páginas</span>
+        <span class="cv-option__cta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Descargar
+        </span>
+      </a>
+
+      <!-- English -->
+      <a href="{{ '/assets/cv/KarenCamachoCV_EN.pdf' | relative_url }}" class="cv-option" download="Karen_Camacho_CV_EN.pdf" data-toast="Downloading CV in English…">
+        <span class="contact-icon-wrapper cv-option__badge">EN</span>
+        <span class="cv-option__lang">English</span>
+        <span class="cv-option__meta">PDF · 2 pages</span>
+        <span class="cv-option__cta">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download
+        </span>
+      </a>
+    </div>
+  </div>
+</div>

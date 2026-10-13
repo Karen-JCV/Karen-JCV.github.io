@@ -15,7 +15,7 @@
 
 ---
 
-### 💼 Perfil & Enfoque
+### Perfil & Enfoque
 
 Especializada en cerrar la brecha entre la experimentación analítica y los productos de datos en producción:
 - **Machine Learning Predictivo**: Modelos supervisados de retención (*churn* a 90 días), calibración probabilística y explicabilidad rigurosa mediante **SHAP**.
@@ -24,7 +24,7 @@ Especializada en cerrar la brecha entre la experimentación analítica y los pro
 
 ---
 
-### 🚀 Proyectos Destacados
+### Proyectos Destacados
 
 | Proyecto | Descripción | Enlaces |
 | :--- | :--- | :---: |
@@ -34,7 +34,7 @@ Especializada en cerrar la brecha entre la experimentación analítica y los pro
 
 ---
 
-### 🛠️ Stack Tecnológico
+### Stack Tecnológico
 
 ```text
 ├── Lenguajes & Core        :: Python 3.x · SQL · Git & GitHub · Bash

@@ -103,6 +103,77 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- 7. CV Download Modal (language picker) ---
+  const cvTrigger = document.getElementById('cv-download-btn');
+  const cvModal = document.getElementById('cv-modal');
+
+  if (cvTrigger && cvModal) {
+    const cvDialog = cvModal.querySelector('.cv-modal__dialog');
+    const cvClose = cvModal.querySelector('.cv-modal__close');
+    const cvOptions = cvModal.querySelectorAll('.cv-option');
+    const toastLabel = toast ? toast.querySelector('span') : null;
+    const toastDefault = toastLabel ? toastLabel.textContent : '';
+    let lastFocused = null;
+
+    const openCvModal = (e) => {
+      e.preventDefault();
+      lastFocused = document.activeElement;
+      cvModal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      if (cvOptions.length) setTimeout(() => cvOptions[0].focus(), 50);
+    };
+
+    const closeCvModal = () => {
+      cvModal.classList.remove('is-open');
+      document.body.style.overflow = '';
+      if (lastFocused) lastFocused.focus();
+    };
+
+    cvTrigger.addEventListener('click', openCvModal);
+    cvClose.addEventListener('click', closeCvModal);
+
+    // Close when clicking the dimmed backdrop
+    cvModal.addEventListener('click', (e) => {
+      if (e.target === cvModal) closeCvModal();
+    });
+
+    // Keyboard: Esc closes, Tab stays inside the dialog
+    document.addEventListener('keydown', (e) => {
+      if (!cvModal.classList.contains('is-open')) return;
+      if (e.key === 'Escape') {
+        closeCvModal();
+        return;
+      }
+      if (e.key === 'Tab') {
+        const items = cvDialog.querySelectorAll('a[href], button:not([disabled])');
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    });
+
+    // Choosing a language starts the download (native <a download>) and confirms with the toast
+    cvOptions.forEach(opt => {
+      opt.addEventListener('click', () => {
+        setTimeout(closeCvModal, 150);
+        if (toast && toastLabel) {
+          toastLabel.textContent = opt.getAttribute('data-toast') || toastDefault;
+          toast.classList.add('show');
+          setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => { toastLabel.textContent = toastDefault; }, 400);
+          }, 3200);
+        }
+      });
+    });
+  }
+
   // --- 6. Back to Top Button ---
   const backToTopBtn = document.getElementById('back-to-top');
   if (backToTopBtn) {

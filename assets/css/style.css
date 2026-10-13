@@ -1198,6 +1198,177 @@ a {
 }
 
 /* ==========================================================================
+   CV DOWNLOAD MODAL (language picker)
+   ========================================================================== */
+.cv-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(5, 7, 11, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+}
+
+.cv-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.25s ease, visibility 0s;
+}
+
+.cv-modal__dialog {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  background: var(--gradient-dark-card);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px 32px 32px;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg), var(--shadow-glow);
+  transform: translateY(16px) scale(0.98);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-modal.is-open .cv-modal__dialog {
+  transform: translateY(0) scale(1);
+}
+
+.cv-modal__dialog::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-brand);
+}
+
+.cv-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cv-modal__close:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: var(--accent-purple);
+  color: #ffffff;
+}
+
+.cv-modal__title {
+  font-size: 1.75rem;
+  margin-bottom: 8px;
+}
+
+.cv-modal__subtitle {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  margin-bottom: 28px;
+}
+
+.cv-modal__options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.cv-option {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 24px 16px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.cv-option:hover,
+.cv-option:focus-visible {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: var(--accent-purple);
+  transform: translateY(-3px);
+  outline: none;
+}
+
+.cv-option__badge {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.cv-option__lang {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.cv-option__meta {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cv-option__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent-purple-light);
+}
+
+.cv-modal__close:focus-visible {
+  outline: 2px solid var(--accent-purple);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .cv-modal__dialog {
+    padding: 36px 20px 24px 20px;
+  }
+
+  .cv-modal__options {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cv-modal,
+  .cv-modal__dialog {
+    transition: none;
+  }
+}
+
+/* ==========================================================================
    FOOTER
    ========================================================================== */
 .site-footer {
