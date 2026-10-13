@@ -1216,6 +1216,10 @@ a {
   transition: opacity 0.25s ease, visibility 0s linear 0.25s;
 }
 
+.cv-modal[hidden] {
+  display: none;
+}
+
 .cv-modal.is-open {
   opacity: 1;
   visibility: visible;

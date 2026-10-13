@@ -118,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const openCvModal = (e) => {
       e.preventDefault();
       lastFocused = document.activeElement;
+      cvModal.hidden = false;
+      void cvModal.offsetWidth; // reflow so the fade-in transition runs
       cvModal.classList.add('is-open');
       document.body.style.overflow = 'hidden';
       if (cvOptions.length) setTimeout(() => cvOptions[0].focus(), 50);
@@ -127,6 +129,9 @@ document.addEventListener('DOMContentLoaded', () => {
       cvModal.classList.remove('is-open');
       document.body.style.overflow = '';
       if (lastFocused) lastFocused.focus();
+      setTimeout(() => {
+        if (!cvModal.classList.contains('is-open')) cvModal.hidden = true;
+      }, 300);
     };
 
     cvTrigger.addEventListener('click', openCvModal);
